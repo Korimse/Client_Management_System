@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Customer from './components/Customer';
 import './App.css';
+import CustomerAdd from './components/CustomerAdd';
 import Paper from '@material-ui/core/Paper';
 import Table from '@material-ui/core/Table';
 import TableHead from '@material-ui/core/TableHead';
@@ -52,6 +53,7 @@ class App extends Component{
   render(){
     const {classes} = this.props;
     return (
+      <div>  
       <Paper className={classes.root}>
         <Table className={classes.table}>
           <TableHead>
@@ -69,17 +71,17 @@ class App extends Component{
           this.state.customers ? this.state.customers.map(c=>{
             return(
               <Customer
-                key={c.id}
-                id={c.id}
-                image={c.image}
-                name={c.name}
-                birthday={c.birthday}
-                gender={c.gender}
-                job={c.job}
+              key={c.id}
+              id={c.id}
+              image={c.image}
+              name={c.name}
+              birthday={c.birthday}
+              gender={c.gender}
+              job={c.job}
               />
-            )
-          }) : 
-          <TableRow>
+              )
+            }) : 
+            <TableRow>
             <TableCell colspan="6" align="center">
               <CircularProgress className={classes.progress} variant="determinate" value={this.state.completed}/>
             </TableCell>
@@ -88,6 +90,8 @@ class App extends Component{
           </TableBody>
         </Table>
       </Paper>
+      <CustomerAdd></CustomerAdd>
+    </div>
     );
   }
 }
