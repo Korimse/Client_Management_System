@@ -1,6 +1,7 @@
 ## Client ManageMent System
 
 Nodejs + React Study...
+AWS(X) ... 요금 폭탄
 
 # Getting Started with Create React App
 
