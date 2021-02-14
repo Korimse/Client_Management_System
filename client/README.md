@@ -1,6 +1,6 @@
 ## Client ManageMent System
 
-Nodejs + React
+Nodejs + React Study...
 
 # Getting Started with Create React App
 
